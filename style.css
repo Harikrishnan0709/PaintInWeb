@@ -1,0 +1,154 @@
+body {
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    color: white;
+    user-select: none;
+    font-size: 12px;
+}
+
+#title-container {
+    position: sticky;
+    left: 0;
+    top: 0;
+    background: dodgerblue;
+    box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.5);
+}
+
+#title-container #title {
+    padding: 2px;
+    margin: auto auto;
+    text-align: center;;
+    font-size: 18px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+#menu-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: 0.5s;
+}
+
+#menu-container .menu-item-container {
+    display: inline-block;
+    transition: inherit;
+}
+
+.menu-item-container #menu-title {
+    padding: 4px 12px;
+    cursor: default;
+    background-color: inherit;
+}
+
+.menu-item-container #menu-title:hover {
+    background-color: white;
+    color: black;
+}
+
+#menu-container .menu-item-container .menu-dropdown {
+    position: absolute;
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: white;
+    transition: inherit;
+    box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+#menu-container .menu-item-container:hover .menu-dropdown {
+    display: block;
+    color: black;
+    min-width: 240px;
+    transition: inherit;
+}
+
+#menu-container .menu-item-container .menu-dropdown .menu-item {
+    padding: 4px 6px;
+    cursor: default;
+}
+
+#menu-container .menu-item-container .menu-dropdown .menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+form {
+    background-color: white; 
+    margin: 0px; 
+    padding: 2px; 
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+form * {
+    outline: none;
+}
+
+#tool-container {
+    display: inline-block;
+    margin: 4px;
+    padding: 4px;
+    outline: none;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 20px;
+  background: white;  
+  border-radius: 50px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 18px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: dodgerblue;
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+input[type=color] {
+    background: none;
+    border: none;
+    outline: none;
+    width: 25px;
+    height: 25px;
+}
+
+input[type=color]::-webkit-color-swatch {
+   -webkit-appearance: none;
+   width: 8px;
+   height: 8px;
+   border: 1px solid grey;
+}
+
+input[type=color]::-webkit-color-swatch-wrapper {
+}
+
+select {
+    padding: 2px 2px;
+    outline: none;
+    border: 1px solid lightgrey;
+    font-family: inherit;
+}
+
+svg {
+    height: 100%;
+    width: 80%;
+    position: static;
+    margin: 20px auto;
+    border-radius: 8px;
+    display: block;
+    background-color: white;
+    box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.8);
+}

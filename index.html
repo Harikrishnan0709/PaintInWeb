@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Paint</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="..\batlogo.png" type="image/x-icon" />
+</head>
+<body>
+    <div id="title-container">
+        <div id="title">Paint n Web</div>
+        <ul id="menu-container">
+            <li class="menu-item-container">
+                <div id="menu-title">File</div>
+                <ul class="menu-dropdown">
+                    <li class="menu-item" onclick="newDocument()">New</li>
+                    <li class="menu-item" onclick="window.close()">Exit</li>
+                </ul>
+            </li>
+            <li class="menu-item-container">
+                <div id="menu-title">Edit</div>
+                <ul class="menu-dropdown">
+                    <li class="menu-item" onclick="">Cut</li>
+                    <li class="menu-item" onclick="">Copy</li>
+                    <li class="menu-item" onclick="">Paste</li>
+                    <li class="menu-item" onclick="svg.innerHTML += prompt('Enter the Shape in a SVG Format : ')">Manual Shape</li>
+                </ul>
+            </li>
+            <li class="menu-item-container">
+                <div id="menu-title">Help</div>
+                <ul class="menu-dropdown">
+                    <li class="menu-item" onclick="alert('Paint Web Application');">About</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div id="tools">
+            <form name="formtools">
+                <div id="tool-container">
+                    Size <input type="range" name="strokeWidth" accesskey="I" min="2" max="72" step="2" value="4" />
+                </div>
+                <div id="tool-container">
+                    Color <input type="color" accesskey="F" name="strokecolor" />
+                    <input type="color" name="fillcolor" accesskey="B" value="#ffffff" />
+                </div>
+                <div id="tool-container">
+                    Shape <select name="strokeshape" accesskey="S">
+                        <option value="path">Free Hand</option>
+                        <option value="ellipse">Circle</option>
+                        <option value="line" selected>Line</option>
+                        <option value="rect">Rectangle</option>
+                    </select>
+                </div>
+                <div id="tool-container">
+                    Stroke <input type="checkbox" name="strokeFlag" checked />
+                    Fill <input type="checkbox" name="fillFlag" />
+                </div>
+                <div id="tool-container">
+                    Stroke Opacity <input type="range" name="strokeopacity" accesskey="F" min="0" max="1" step="0.001" value="1" />
+                </div>
+                <div id="tool-container">
+                    Fill Opacity <input type="range" name="fillopacity" accesskey="F" min="0" max="1" step="0.001" value="1" />
+                </div>
+</form>
+        </div>
+    </div>
+    <div id="svg-container">
+        <svg id="svg" onmousemove="drawData(event)" onmousedown="startShape(event)" onmouseup="endShape(event)" oncontextmenu="return false" onmousewheel="">
+            
+        </svg>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
